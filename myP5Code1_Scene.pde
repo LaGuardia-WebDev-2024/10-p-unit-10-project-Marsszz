@@ -1,15 +1,15 @@
 var bakeryLabels = ["Crossiants","Baguettes"];
-
+var Adawong = loadImage("https://static.wikia.nocookie.net/residentevil/images/0/0c/RE4R_Ada_Wong_Render.png/revision/latest?cb=20240316224127");
 setup = function() {
 
-  size(400, 400); 
+  size(800, 800); 
   background(0,0,0,0);
 
   var crossiantX = 60;
   textSize(30);
 
   while(crossiantX < 300){
-    text("🥐", crossiantX, 85);
+    image(Adawong, crossiantX, 85, 100, 100);
     crossiantX += 40;
   }
 
@@ -19,6 +19,11 @@ setup = function() {
 }
 
 draw = function(){   
+    var crossiantX = 60;
+  while(crossiantX < 300){
+    image(Adawong, crossiantX, 85, 100, 200);
+    crossiantX += 40;
+  }
 
 }
 
