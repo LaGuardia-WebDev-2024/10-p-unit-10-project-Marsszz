@@ -1,12 +1,19 @@
 var bakeryLabels = ["Ada Wong","Leon Kennedy","Grace Ashcroft","Jill Valentine"];
+var favs = ["first fave","second fave","third fave","fourth fave"];
 var Adawong = loadImage("https://static.wikia.nocookie.net/residentevil/images/0/0c/RE4R_Ada_Wong_Render.png/revision/latest?cb=20240316224127");
 var Leon = loadImage("https://static.wikia.nocookie.net/mugen/images/b/b2/RE4R_Leon_Render.png/revision/latest?cb=20230412221810");
 var Grace = loadImage("https://static.wikia.nocookie.net/p__/images/9/94/Graceashcroft.png/revision/latest?cb=20260227022211&path-prefix=protagonist");
 var Jill = loadImage("https://static.wikia.nocookie.net/murderseries/images/1/1b/Jill.png/revision/latest?cb=20150302003808");
+var Ada = loadImage("https://preview.redd.it/would-you-guys-be-happy-with-an-ada-wong-led-entry-in-the-v0-yf9rkxqa10vd1.jpeg?width=640&crop=smart&auto=webp&s=0afba73cb9275630436921af232ced18369ab989");
 setup = function() {
+
 
   size(800, 800); 
   background(0,0,0,0);
+
+    for (var i = 55; i < 350 ; i+=20){
+    text('I love Ada ',20,i);
+   }
 
   var crossiantX = 60;
   textSize(30);
@@ -21,9 +28,18 @@ setup = function() {
   text(bakeryLabels[1], 90, 350);
   text(bakeryLabels[2], 90, 510);
   text(bakeryLabels[3], 90, 700);
-}
+
+    textSize(15);
+  text(favs[0], 200, 200);
+  text(favs[1], 200, 350);
+  text(favs[2], 200, 510);
+  text(favs[3], 200, 700);
+} 
+
 
 draw = function(){   
+
+
   //Ada image loop!
     var crossiantX = 60;
   while(crossiantX < 650){
@@ -54,13 +70,13 @@ draw = function(){
     Jillx += 40;
   }
   var Jillx = 60;
-
+if(mousePressed){
+ image(Ada, mouseX, mouseY, 80, 150);
+}
 
 }
 
 
 
 
-mouseClicked = function(){
 
-}
